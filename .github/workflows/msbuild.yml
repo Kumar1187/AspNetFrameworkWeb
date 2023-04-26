@@ -43,7 +43,7 @@ jobs:
       shell: cmd
       run: |
           net stop w3svc
-          xcopy \AspNetFrameworkWeb\SampleAspNetFrameworkWeb\bin\Publish\_PublishedWebsites\SampleAspNetFrameworkWeb D:\AspNetFrameworkWeb /y /s /e /h
+          xcopy \SampleAspNetFrameworkWeb\bin\Publish\_PublishedWebsites\SampleAspNetFrameworkWeb D:\AspNetFrameworkWeb /y /s /e /h
           net start w3svc
     
 
