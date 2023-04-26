@@ -41,10 +41,7 @@ jobs:
     - name: Copying files to application directory
       working-directory: ${{env.GITHUB_WORKSPACE}}
       shell: cmd
-      run: |
-          net stop w3svc
-          xcopy .\SampleAspNetFrameworkWeb\bin\Publish\_PublishedWebsites\SampleAspNetFrameworkWeb D:\AspNetFrameworkWeb /y /s /e /h
-          net start w3svc
+      run: xcopy .\SampleAspNetFrameworkWeb\bin\Publish\_PublishedWebsites\SampleAspNetFrameworkWeb D:\AspNetFrameworkWeb /y /s /e /h
     
 
       
