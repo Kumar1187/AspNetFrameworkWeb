@@ -37,9 +37,16 @@ jobs:
     - name: Publish
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: msbuild /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Platform="Any CPU" /p:outdir=${{env.PUBLISH_OUTPUT_DIRECTORY}}
+    
+    - name: Copying files to application directory
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      shell: cmd
+      run: |
+          net stop w3svc
+          xcopy ${{env.PUBLISH_OUTPUT_DIRECTORY}}\_PublishedWebsites\SampleAspNetFrameworkWeb D:\AspNetFrameworkWeb /y /s /e /h
+          net start w3svc
+    
 
       
       
-      
-      
-      
+
