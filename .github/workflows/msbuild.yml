@@ -23,7 +23,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: AMITKUMAWAT
+    runs-on: ASPNET-FRAMEWORK-WEB-RUNNER
 
     steps:
     - uses: actions/checkout@v3
