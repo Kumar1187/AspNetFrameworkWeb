@@ -8,7 +8,7 @@ env:
   # Path to the solution file relative to the root of the project.
   SOLUTION_FILE_PATH: .
   BUILD_CONFIGURATION: Release
-  PUBLISH_OUTPUT_DIRECTORY: "bin/PublishApplication"
+  PUBLISH_OUTPUT_DIRECTORY: "bin/Publish"
 
 permissions:
   contents: read
